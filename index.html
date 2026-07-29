@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Minded — Curriculum &amp; Competitive Math Mentoring and Tutoring</title>
+    <meta name="description" content="Weekly 90-minute in-person math classes in Redmond and Bellevue, taught in small 1:5 batches. Curriculum and competitive math for Grades 1 to 4. Free trial class.">
+
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIyIiBmaWxsPSIjMWMzYTZlIi8+PHRleHQgeD0iNTAiIHk9IjU2IiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSI1NiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2VmYzk1YSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPk08L3RleHQ+PC9zdmc+Cg==">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Math Minded">
+    <meta property="og:url" content="https://www.mathmindededu.com">
+    <meta property="og:title" content="Math Minded — Curriculum &amp; Competitive Math Mentoring and Tutoring">
+    <meta property="og:description" content="Weekly 90-minute in-person math classes in Redmond and Bellevue, taught in small 1:5 batches. Grades 1 to 4. Free trial class.">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Math Minded — Curriculum &amp; Competitive Math Mentoring and Tutoring">
+    <meta name="twitter:description" content="Weekly 90-minute in-person math classes in Redmond and Bellevue, taught in small 1:5 batches. Grades 1 to 4. Free trial class.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Math Minded LLC",
+      "url": "https://www.mathmindededu.com",
+      "description": "Curriculum and competitive math mentoring and tutoring, taught in weekly 90-minute in-person classes in small batches of five, for students in Grades 1 to 4.",
+      "email": "mathminded.edu@gmail.com",
+      "telephone": "+1-601-460-0205",
+      "areaServed": [
+        { "@type": "City", "name": "Redmond, Washington" },
+        { "@type": "City", "name": "Bellevue, Washington" }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --cream: #fbf3e6;
+            --cream-deep: #f4ead6;
+            --card: #fffdf8;
+            --navy: #1c3a6e;
+            --navy-deep: #142c56;
+            --gold: #b8891a;
+            --gold-band: #ddb14a;
+            --gold-pale: #efc95a;
+            --gold-line: #d9b45e;
+            --blue-text: #2f5da8;
+            --text-primary: #1f2a3d;
+            --text-secondary: #4f5a70;
+            --text-muted: #8c8676;
+            --border: #e8dcc4;
+            --font-serif: "Playfair Display", "Iowan Old Style", Georgia, "Times New Roman", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--cream);
+            color: var(--text-primary);
+            line-height: 1.5;
+            font-weight: 400;
+            letter-spacing: -0.011em;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 52px;
+            background: rgba(251, 243, 230, 0.86);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 9999;
+        }
+
+        .nav-container {
+            max-width: 1040px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+        }
+
+        .nav-logo {
+            font-family: var(--font-serif);
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-logo span {
+            font-family: var(--font-sans);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-left: 5px;
+            vertical-align: 2px;
+        }
+
+        .nav-links { display: flex; gap: 22px; }
+
+        .nav-links a {
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover { color: var(--navy); }
+
+        section[id] { scroll-margin-top: 76px; }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            padding: 116px 24px 20px 24px;
+            max-width: 1040px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .symbol-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .symbols {
+            font-family: var(--font-serif);
+            font-size: 19px;
+            color: var(--gold);
+            letter-spacing: 0.85em;
+            opacity: 0.9;
+            white-space: nowrap;
+        }
+
+        .symbol-rule {
+            flex: 1;
+            height: 1px;
+            background: var(--gold-line);
+        }
+
+        .band {
+            display: inline-block;
+            border-radius: 60px;
+            margin-bottom: 16px;
+        }
+
+        .band-primary {
+            background: var(--gold-band);
+            color: var(--navy);
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 1.38;
+            letter-spacing: -0.015em;
+            padding: 22px 44px;
+            max-width: 840px;
+        }
+
+        .band-where {
+            background: var(--navy);
+            color: #ffffff;
+            font-size: 18.5px;
+            font-weight: 600;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+            padding: 16px 38px;
+            max-width: 720px;
+        }
+
+        .band-mentor {
+            background: transparent;
+            border: 1px solid var(--gold-line);
+            color: var(--navy);
+            font-family: var(--font-serif);
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.4;
+            padding: 15px 36px;
+            max-width: 660px;
+            margin-bottom: 0;
+        }
+
+        /* ---------- Sections ---------- */
+        .section { max-width: 1040px; margin: 0 auto; padding: 46px 24px; }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 30px;
+            font-weight: 600;
+            font-style: italic;
+            color: var(--navy);
+            letter-spacing: -0.01em;
+            margin-bottom: 30px;
+        }
+
+        /* ---------- Track record ---------- */
+        .record-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .record-card {
+            background: var(--card);
+            border: 1px solid var(--gold-pale);
+            border-radius: 16px;
+            padding: 26px;
+        }
+
+        .record-card h3 {
+            font-size: 16.5px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 14px;
+            letter-spacing: -0.01em;
+        }
+
+        .record-card ul { list-style: none; }
+
+        .record-card li {
+            font-size: 14.5px;
+            color: var(--blue-text);
+            line-height: 1.5;
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 7px;
+        }
+
+        .record-card li:last-child { margin-bottom: 0; }
+
+        .record-card li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            top: -1px;
+            color: var(--gold);
+            font-size: 15px;
+        }
+
+        /* ---------- Batch of five ---------- */
+        .batch-row {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 18px;
+            align-items: stretch;
+        }
+
+        .ratio-panel {
+            background: var(--navy);
+            border-radius: 20px;
+            padding: 38px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .ratio-num {
+            font-family: var(--font-serif);
+            font-size: 60px;
+            font-weight: 600;
+            color: var(--gold-pale);
+            line-height: 1;
+            white-space: nowrap;
+        }
+
+        .ratio-text {
+            font-size: 16.5px;
+            color: #e8eefa;
+            line-height: 1.6;
+        }
+
+        .ratio-text strong { color: #ffffff; font-weight: 700; }
+
+        .offers-panel {
+            background: var(--gold-band);
+            border-radius: 20px;
+            padding: 34px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .offer {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.4;
+            padding-left: 26px;
+            position: relative;
+        }
+
+        .offer::before {
+            content: "\2605";
+            position: absolute;
+            left: 0;
+            top: 1px;
+            color: var(--navy);
+            font-size: 13px;
+        }
+
+        /* ---------- What your child gets ---------- */
+        .gets-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 26px 40px;
+        }
+
+        .get-item {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.55;
+            padding-left: 28px;
+            position: relative;
+            letter-spacing: -0.01em;
+        }
+
+        .get-item::before {
+            content: "\2605";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--gold);
+            font-size: 13px;
+        }
+
+        /* ---------- Founders ---------- */
+        .founders-panel {
+            background: var(--cream-deep);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 46px;
+        }
+
+        .founders-panel p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 760px;
+            margin-bottom: 18px;
+        }
+
+        .founders-panel strong { color: var(--text-primary); font-weight: 600; }
+
+        .calling {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 22px !important;
+            color: var(--gold) !important;
+            margin-bottom: 0 !important;
+        }
+
+        /* ---------- CTA band ---------- */
+        .cta {
+            background: var(--navy);
+            margin-top: 40px;
+            padding: 52px 24px;
+        }
+
+        .cta-inner { max-width: 1040px; margin: 0 auto; }
+
+        .cta h2 {
+            font-family: var(--font-serif);
+            font-size: 38px;
+            font-weight: 600;
+            color: var(--gold-pale);
+            letter-spacing: -0.015em;
+            margin-bottom: 22px;
+        }
+
+        .cta-grades {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .cta-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.22);
+            margin: 30px 0 26px;
+        }
+
+        .contact-grid {
+            display: flex;
+            gap: 64px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item .label {
+            display: block;
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold-pale);
+            margin-bottom: 7px;
+        }
+
+        .contact-item a, .contact-item span {
+            font-size: 16.5px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover { text-decoration: underline; }
+
+        footer {
+            background: var(--navy-deep);
+            padding: 22px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1040px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-inner p { font-size: 12px; color: #97a6c4; }
+
+        @media (max-width: 860px) {
+            .record-grid { grid-template-columns: 1fr; }
+            .batch-row { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links { gap: 14px; }
+            .nav-links a { font-size: 11.5px; }
+            .hero { padding-top: 100px; }
+            .symbol-row { margin-bottom: 28px; }
+            .band { border-radius: 26px; }
+            .band-primary { font-size: 18px; padding: 18px 24px; }
+            .band-where { font-size: 16px; padding: 14px 22px; }
+            .band-mentor { font-size: 17px; padding: 13px 22px; }
+            .section { padding: 34px 24px; }
+            .section-title { font-size: 25px; }
+            .gets-grid { grid-template-columns: 1fr; gap: 20px; }
+            .ratio-panel { flex-direction: column; align-items: flex-start; gap: 18px; padding: 30px; }
+            .founders-panel { padding: 30px; }
+            .founders-panel p { font-size: 16px; }
+            .cta h2 { font-size: 28px; }
+            .cta-grades { font-size: 13.5px; }
+            .contact-grid { gap: 26px; flex-direction: column; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { transition: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Math Minded<span>LLC</span></a>
+            <div class="nav-links">
+                <a href="#classes">Our classes</a>
+                <a href="#gets">What your child gets</a>
+                <a href="#founders">Founders</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="symbol-row">
+            <div class="symbols">&Sigma; &pi; &radic; &infin; &Delta;</div>
+            <div class="symbol-rule"></div>
+        </div>
+        <p class="band band-primary">Build strong mathematical thinking and confidence of your child in curriculum and competitive math</p>
+        <p class="band band-where">Weekly 90-minute in-person classes in Redmond / Bellevue</p>
+        <p class="band band-mentor">Taught by a dedicated, experienced mentor with proven results</p>
+    </header>
+
+    <section class="section" id="record">
+        <div class="record-grid">
+            <div class="record-card">
+                <h3>Math Kangaroo USA</h3>
+                <ul>
+                    <li>Medal Winner</li>
+                    <li>Top Rank Holder</li>
+                </ul>
+            </div>
+            <div class="record-card">
+                <h3>Noetic Learning</h3>
+                <ul>
+                    <li>Team Winner</li>
+                    <li>Medal Recipient</li>
+                </ul>
+            </div>
+            <div class="record-card">
+                <h3>MCT and IMC</h3>
+                <ul>
+                    <li>Medal Winner</li>
+                    <li>Top Rank Holder</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="classes">
+        <div class="batch-row">
+            <div class="ratio-panel">
+                <div class="ratio-num">1 : 5</div>
+                <p class="ratio-text">Small batch size <strong>(1:5 Student-Teacher Ratio)</strong> for personalized attention and collaborative learning</p>
+            </div>
+            <div class="offers-panel">
+                <p class="offer">Highly affordable</p>
+                <p class="offer">Free trial class</p>
+                <p class="offer">No commitment</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="gets">
+        <h2 class="section-title">What your child gets</h2>
+        <div class="gets-grid">
+            <p class="get-item">In-house class material and Homework designed through rigorous analysis and review along with periodic assessments</p>
+            <p class="get-item">Detailed feedback on each child's progress, their strengths and areas that need further attention</p>
+            <p class="get-item">Our competitive program is built for every major math competition</p>
+            <p class="get-item">Builds problem solving and analytical thinking skill</p>
+        </div>
+    </section>
+
+    <section class="section" id="founders">
+        <h2 class="section-title">About the Founders</h2>
+        <div class="founders-panel">
+            <p><strong>Two friends of 28 years</strong> — both school and district toppers, top engineering entrance exam rank holders, and graduates of a Tier 1 engineering school. Both went on to become seasoned engineers, leading successful corporate and consulting careers at companies including Oracle, Microsoft, and PwC.</p>
+            <p>Despite the corporate success, our true calling has always been education.</p>
+            <p class="calling">Math Minded is a calling for us.</p>
+        </div>
+    </section>
+
+    <section class="cta" id="contact">
+        <div class="cta-inner">
+            <h2>Book your FREE trial class now!</h2>
+            <p class="cta-grades">Classes for Grade 1 to Grade 4 running since June 2026</p>
+            <div class="cta-divider"></div>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="label">Email</span>
+                    <a href="mailto:mathminded.edu@gmail.com">mathminded.edu@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="label">Call</span>
+                    <a href="tel:+16014600205">+1 601 460 0205</a>
+                </div>
+                <div class="contact-item">
+                    <span class="label">Website</span>
+                    <span>www.mathmindededu.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; 2026 Math Minded LLC</p>
+            <p>Curriculum &amp; Competitive Math Mentoring and Tutoring</p>
+        </div>
+    </footer>
+
+</body>
+</html>
